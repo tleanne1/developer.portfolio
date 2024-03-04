@@ -28,9 +28,9 @@ const Navbar = () => {
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
+          className="text-2xl md:text-4xl text-white font-semibold"
         >
-          LOGO
+          Tracey.
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
@@ -43,7 +43,7 @@ const Navbar = () => {
           ) : (
             <button
               onClick={() => setNavbarOpen(false)}
-              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 hover:border-white"
+              className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
             >
               <XMarkIcon className="h-5 w-5" />
             </button>
