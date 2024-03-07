@@ -13,7 +13,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white" id="about">
+    <section className="text-white" id="projects">
       <h2 className="text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
         Projects
       </h2>
@@ -53,7 +53,7 @@ const AboutSection = () => {
             </li>
           </ul>
           <div className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            <div className="text-[#ADB7BE] hover:text-white mt-3">
+            <div className="text-[#ADB7BE] hover:text-white mt-3 pr-3">
               <a
                 href="https://imaginify-kp1ynopo6-tleannes-projects.vercel.app/"
                 target="_blank"
@@ -113,7 +113,7 @@ const AboutSection = () => {
             </li>
           </ul>
           <div className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            <div className="text-[#ADB7BE] hover:text-white mt-3">
+            <div className="text-[#ADB7BE] hover:text-white mt-3 pr-3">
               <a
                 href="https://imaginify-kp1ynopo6-tleannes-projects.vercel.app/"
                 target="_blank"
@@ -171,7 +171,7 @@ const AboutSection = () => {
             </li>
           </ul>
           <div className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            <div className="text-[#ADB7BE] hover:text-white mt-3">
+            <div className="text-[#ADB7BE] hover:text-white mt-3 pr-3">
               <a
                 href="https://imaginify-kp1ynopo6-tleannes-projects.vercel.app/"
                 target="_blank"
@@ -231,7 +231,7 @@ const AboutSection = () => {
             </li>
           </ul>
           <div className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            <div className="text-[#ADB7BE] hover:text-white mt-3">
+            <div className="text-[#ADB7BE] hover:text-white mt-3 pr-3">
               <a
                 href="https://imaginify-kp1ynopo6-tleannes-projects.vercel.app/"
                 target="_blank"
@@ -289,7 +289,7 @@ const AboutSection = () => {
             </li>
           </ul>
           <div className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            <div className="text-[#ADB7BE] hover:text-white mt-3">
+            <div className="text-[#ADB7BE] hover:text-white mt-3 pr-3">
               <a
                 href="https://imaginify-kp1ynopo6-tleannes-projects.vercel.app/"
                 target="_blank"
@@ -349,7 +349,7 @@ const AboutSection = () => {
             </li>
           </ul>
           <div className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
-            <div className="text-[#ADB7BE] hover:text-white mt-3">
+            <div className="text-[#ADB7BE] hover:text-white mt-3 pr-3">
               <a
                 href="https://imaginify-kp1ynopo6-tleannes-projects.vercel.app/"
                 target="_blank"
