@@ -1,17 +1,8 @@
 "use client";
-import React, { useTransition, useState } from "react";
+import React from "react";
 import Image from "next/image";
 
 const AboutSection = () => {
-  const [tab, setTab] = useState("skills");
-  const [isPending, startTransition] = useTransition();
-
-  const handleTabChange = (id) => {
-    startTransition(() => {
-      setTab(id);
-    });
-  };
-
   return (
     <section className="text-white" id="projects">
       <h2 className="text-center text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
