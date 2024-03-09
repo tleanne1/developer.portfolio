@@ -43,7 +43,7 @@ const AboutSection = () => {
               TailwindCSS
             </li>
           </ul>
-          <div className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+          <div className="flex p-0 md:p-0 md:flex-row md:space-x-8 mt-0">
             <div className="text-[#ADB7BE] hover:text-white mt-3 pr-3">
               <a
                 href="https://imaginify-kp1ynopo6-tleannes-projects.vercel.app/"
@@ -74,36 +74,24 @@ const AboutSection = () => {
             Uber Eats Clone
           </h3>
           <p className="text-base lg:text-lg mt-2">
-            SaaS app with AI features and a payments and credits system using
-            Next.js 14, Cloudinary AI, Clerk, and Stripe.
+            React JS website styled completely with Tailwind CSS. Mobile first
+            responsive design approach using flexbox and grid layouts. Pulling
+            all of the data/images from the data.js file to simulate an API
+            response. Filter through data/images using the javascript filter
+            array method.
           </p>
           <ul className="flex flex-wrap mt-2">
             <li className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 px-2 py-1 text-[0.8rem] uppercase tracking-wider rounded-full">
-              Next.js
+              React.js
             </li>
             <li className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 px-2 py-1 text-[0.8rem] uppercase tracking-wider rounded-full">
-              TypeScript
-            </li>
-            <li className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 px-2 py-1 text-[0.8rem] uppercase tracking-wider rounded-full">
-              MongoDB
-            </li>
-            <li className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 px-2 py-1 text-[0.7rem] uppercase tracking-wider rounded-full">
-              Clerk
-            </li>
-            <li className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 px-2 py-1 text-[0.7rem] uppercase tracking-wider rounded-full">
-              Cloudinary
-            </li>
-            <li className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 px-2 py-1 text-[0.7rem] uppercase tracking-wider rounded-full">
-              Stripe
-            </li>
-            <li className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 px-2 py-1 text-[0.7rem] uppercase tracking-wider rounded-full">
-              Shadcn
-            </li>
-            <li className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 px-2 py-1 text-[0.7rem] uppercase tracking-wider rounded-full">
               TailwindCSS
             </li>
+            <li className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 px-2 py-1 text-[0.8rem] uppercase tracking-wider rounded-full">
+              JavaScript
+            </li>
           </ul>
-          <div className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+          <div className="flex p-0 md:p-0 md:flex-row md:space-x-8 mt-0">
             <div className="text-[#ADB7BE] hover:text-white mt-3 pr-3">
               <a
                 href="https://imaginify-kp1ynopo6-tleannes-projects.vercel.app/"
@@ -161,7 +149,7 @@ const AboutSection = () => {
               TailwindCSS
             </li>
           </ul>
-          <div className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+          <div className="flex p-0 md:p-0 md:flex-row md:space-x-8 mt-0">
             <div className="text-[#ADB7BE] hover:text-white mt-3 pr-3">
               <a
                 href="https://imaginify-kp1ynopo6-tleannes-projects.vercel.app/"
@@ -221,7 +209,7 @@ const AboutSection = () => {
               TailwindCSS
             </li>
           </ul>
-          <div className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+          <div className="flex p-0 md:p-0 md:flex-row md:space-x-8 mt-0">
             <div className="text-[#ADB7BE] hover:text-white mt-3 pr-3">
               <a
                 href="https://imaginify-kp1ynopo6-tleannes-projects.vercel.app/"
@@ -279,7 +267,7 @@ const AboutSection = () => {
               TailwindCSS
             </li>
           </ul>
-          <div className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+          <div className="flex p-0 md:p-0 md:flex-row md:space-x-8 mt-0">
             <div className="text-[#ADB7BE] hover:text-white mt-3 pr-3">
               <a
                 href="https://imaginify-kp1ynopo6-tleannes-projects.vercel.app/"
@@ -339,7 +327,7 @@ const AboutSection = () => {
               TailwindCSS
             </li>
           </ul>
-          <div className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+          <div className="flex p-0 md:p-0 md:flex-row md:space-x-8 mt-0">
             <div className="text-[#ADB7BE] hover:text-white mt-3 pr-3">
               <a
                 href="https://imaginify-kp1ynopo6-tleannes-projects.vercel.app/"
