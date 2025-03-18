@@ -19,7 +19,7 @@ const Footer = () => {
             <ul className="flex items-center gap-10 justify-center mt-4 sm:mt-0">
                 <li><a target="_blank" href="https://github.com/tleanne1?tab=repositories">GitHub</a></li>
                 <li><a target="_blank" href="">Instagram</a></li>
-                <li><a target="_blank" href="">Twitter</a></li>
+                <li><a target="_blank" href="https://x.com/t_leanne1">Twitter</a></li>
             </ul>
         </div>
     </div>
