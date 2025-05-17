@@ -107,6 +107,20 @@ export const workData = [
       websiteLink: "https://fithub-client.vercel.app",
       githubLink: "https://github.com/tleanne1/fithub-client"
     },
+    {
+      title: "BloomBakery – Artisan Cupcake Website",
+      description: "A pastel-themed, responsive website for a fictional boutique cupcake business. Built with React, Tailwind CSS, and Vite. Features a full menu, testimonials, a custom EmailJS-powered order form, and elegant, soft branding throughout.",
+      bgImage: "/bloombakery-client.png",
+      websiteLink: "https://bloombakery-client.vercel.app",
+      githubLink: "https://github.com/tleanne1/bloombakery-client"
+    },
+    {
+      title: "StoryTime Kids – Children’s Author Site",
+      description: "A playful, responsive website built for a fictional children’s author. Developed with React, Tailwind CSS, and Vite. Features animated sections, soft color themes, book previews, testimonials, and a friendly contact form — perfect for showcasing stories and connecting with young readers.",
+      bgImage: "/storytime-client.png",
+      websiteLink: "https://storytime-client.vercel.app",
+      githubLink: "https://github.com/tleanne1/storytime-client"
+    },    
 ]
 
 export const serviceData = [
