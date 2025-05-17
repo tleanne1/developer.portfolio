@@ -9,6 +9,7 @@ import vscode from './vscode.png';
 import sentry from './sentry.png';
 import figma from './figma.png';
 import git from './git.png';
+import github_icon from './github_icon.png'
 import mongodb from './mongodb.png';
 import right_arrow_white from './right-arrow-white.png';
 import logo from './logo.png';
@@ -48,6 +49,7 @@ export const assets = {
     sentry,
     figma,
     git,
+    github_icon,
     mongodb,
     right_arrow_white,
     logo,
@@ -78,41 +80,79 @@ export const assets = {
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
-        websiteLink: "https://best-eats-tleanne.netlify.app",
-        githubLink: "https://github.com/tleanne1/best.eats"
+        title: "Harmony Yoga – Studio Website",
+        description: "Responsive frontend project simulating a real client build for a modern yoga studio. Built with React, Vite, Tailwind CSS, and Framer Motion. Features animated transitions, reusable components, and a calming, mobile-friendly design.",
+        bgImage: "/harmony-yoga.png",
+        websiteLink: "https://harmony-yoga-client.vercel.app",
+        githubLink: "https://github.com/tleanne1/harmony-yoga-client"
     },
     {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-2.png',
-        websiteLink: "https://coffee-shop-website-tleanne.netlify.app",
-        githubLink: "https://github.com/tleanne1/coffee-shop-website-responsive"
+      title: "Bliss Café – Coffee Shop Website",
+      description: "A sleek, mobile-friendly landing page for a fictional café. Designed with modern UI patterns using HTML, CSS, and JavaScript. Includes hero, product highlights, and location/contact sections.",
+      bgImage: "/bliss-cafe.png",
+      websiteLink: "https://bliss-cafe-two.vercel.app",
+      githubLink: "https://https://github.com/tleanne1/bliss-cafe"
     },
     {
-        title: 'Frontend Project',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
-        websiteLink: "https://modern-restaurant-tleanne.netlify.app",
-        githubLink: "https://github.com/tleanne1/modern-ui.ux-restaurant"
+      title: "BrightNest – Interior Design Portfolio",
+      description: "A warm, elegant portfolio site for a fictional interior designer. Built with React, Tailwind CSS, and Vite, featuring a custom color palette, image gallery, services, and testimonials.",
+      bgImage: "/brightnest-client.png",
+      websiteLink: "https://brightnest.vercel.app",
+      githubLink: "https://github.com/tleanne1/brightnest-client"
     },
     {
-        title: 'Frontend Project',
-        description: 'Web Design',
-        bgImage: '/work-4.png',
-        websiteLink: "https://hotel-booking-website-tleanne.netlify.app",
-        githubLink: "https://github.com/tleanne1/hotel-booking-website"
+      title: "StayEase – Hotel Booking Website",
+      description: "A clean and professional frontend for a fictional hotel brand. Built using HTML, CSS, and JavaScript. Includes interactive room listings, pricing cards, and a booking call-to-action.",
+      bgImage: "/work-4.png",
+      websiteLink: "https://hotel-booking-website-tleanne.netlify.app",
+      githubLink: "https://github.com/tleanne1/hotel-booking-website"
     },
 ]
 
 export const serviceData = [
-    { icon: assets.web_icon, title: 'Web design', description: 'Web development is the process of building, programming...', link: '' },
-    //{ icon: assets.mobile_icon, title: 'Mobile app', description: 'Mobile app development involves creating software for mobile devices...', link: '' },
-    { icon: assets.ui_icon, title: 'UI/UX design', description: 'UI/UX design focuses on creating a seamless user experience...', link: '' },
-    // { icon: assets.graphics_icon, title: 'Graphics design', description: 'Creative design solutions to enhance visual communication...', link: '' },
-]
+    {
+      icon: assets.frontend_icon,
+      title: "Frontend Development",
+      description:
+        "I build responsive, accessible, and high-performance web interfaces using React, Next.js, Tailwind CSS, and modern JavaScript. My work ensures seamless UX across all devices and screen sizes.",
+      link: "#projects"
+    },
+    {
+      icon: assets.secure_code_icon,
+      title: "Secure Web Development",
+      description:
+        "With a foundation in cybersecurity, I write code aligned with OWASP best practices, mitigating risks like XSS and injection vulnerabilities while maintaining clean and scalable architecture.",
+      link: "#about"
+    },
+    {
+      icon: assets.uiux_icon,
+      title: "UI/UX Design Collaboration",
+      description:
+        "I translate designs into code with pixel-perfect accuracy and performance in mind. Whether working from Figma files or mockups, I focus on accessibility, interaction, and visual storytelling.",
+      link: "#portfolio"
+    },
+    {
+      icon: assets.api_icon,
+      title: "API Integration",
+      description:
+        "From REST APIs to third-party services, I integrate dynamic data with frontend apps securely and efficiently—handling data flow, error states, and UX gracefully.",
+      link: "#projects"
+    },
+    {
+      icon: assets.performance_icon,
+      title: "Performance Optimization",
+      description:
+        "I audit, debug, and enhance web app speed using modern techniques like lazy loading, memoization, and Lighthouse benchmarking to deliver fast, user-first experiences.",
+      link: "#"
+    },
+    {
+      icon: assets.consulting_icon,
+      title: "Tech Consulting & Audits",
+      description:
+        "Whether you're a startup or personal brand, I offer code audits and design feedback to improve web performance, maintainability, and security posture.",
+      link: "#contact"
+    }
+  ];  
 
 export const infoList = [
     { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Technologies', description: 'JavaScript, React Js, Next Js, Node Js, Python' },
