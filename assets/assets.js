@@ -103,7 +103,7 @@ export const workData = [
     {
       title: "FitHub – Fitness Coach Promo Site",
       description: "A bold, modern promo site for a fictional fitness coach. Built with React, Tailwind CSS, and Vite. Includes a custom color palette, featured programs, testimonials, and responsive layout.",
-      bgImage: "/work-4.png",
+      bgImage: "/fithub-client.png",
       websiteLink: "https://fithub-client.vercel.app",
       githubLink: "https://github.com/tleanne1/fithub-client"
     },
