@@ -97,15 +97,15 @@ export const workData = [
       title: "BrightNest – Interior Design Portfolio",
       description: "A warm, elegant portfolio site for a fictional interior designer. Built with React, Tailwind CSS, and Vite, featuring a custom color palette, image gallery, services, and testimonials.",
       bgImage: "/brightnest-client.png",
-      websiteLink: "https://brightnest.vercel.app",
+      websiteLink: "https://brightnest-client.vercel.app/",
       githubLink: "https://github.com/tleanne1/brightnest-client"
     },
     {
-      title: "StayEase – Hotel Booking Website",
-      description: "A clean and professional frontend for a fictional hotel brand. Built using HTML, CSS, and JavaScript. Includes interactive room listings, pricing cards, and a booking call-to-action.",
+      title: "FitHub – Fitness Coach Promo Site",
+      description: "A bold, modern promo site for a fictional fitness coach. Built with React, Tailwind CSS, and Vite. Includes a custom color palette, featured programs, testimonials, and responsive layout.",
       bgImage: "/work-4.png",
-      websiteLink: "https://hotel-booking-website-tleanne.netlify.app",
-      githubLink: "https://github.com/tleanne1/hotel-booking-website"
+      websiteLink: "https://fithub-client.vercel.app",
+      githubLink: "https://github.com/tleanne1/fithub-client"
     },
 ]
 
