@@ -21,7 +21,7 @@ const ServicesPage = () => {
 
   return (
     <motion.div
-      className="min-h-screen w-full px-4 sm:px-8 md:px-[12%] py-16 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto]"
+      className="min-h-screen w-full px-[12%] py-16 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
