@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from "motion/react";
 import { workData } from '@/assets/assets';
+import Image from 'next/image';
 
 const categories = ["All", "Frontend", "Backend", "Fullstack", "UI/UX", "WordPress"];
 
@@ -46,7 +47,7 @@ export default function ProjectsPage() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
-        Explore categorized projects across frontend, fullstack, WordPress, and UI/UX.
+        Explore categorized projects across frontend, backend, fullstack, WordPress, and UI/UX.
       </motion.p>
 
       {/* Filter Tabs */}
@@ -60,7 +61,7 @@ export default function ProjectsPage() {
           <motion.button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`px-5 py-2 rounded-full border font-medium ${
+            className={`px-5 py-2 rounded-full border ${
               selectedCategory === category
                 ? "bg-black text-white"
                 : "bg-white text-black border-gray-300"
@@ -74,17 +75,14 @@ export default function ProjectsPage() {
       </motion.div>
 
       {/* Project Grid */}
-      <motion.div
-        layout
-        className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
-      >
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredProjects.map((project, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 + index * 0.1 }}
-            className="border border-gray-300 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition bg-white"
+            className="border border-gray-300 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition"
           >
             <div
               className="h-48 bg-cover bg-center"
@@ -98,7 +96,7 @@ export default function ProjectsPage() {
                   href={project.websiteLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-gray-700 hover:underline"
+                  className="text-sm text-gray-600 hover:underline"
                 >
                   Live
                 </a>
@@ -106,7 +104,7 @@ export default function ProjectsPage() {
                   href={project.githubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-gray-700 hover:underline"
+                  className="text-sm text-gray-600 hover:underline"
                 >
                   GitHub
                 </a>
@@ -114,7 +112,7 @@ export default function ProjectsPage() {
             </div>
           </motion.div>
         ))}
-      </motion.div>
+      </div>
 
       {/* Bottom Back Button */}
       <motion.a
