@@ -1,9 +1,19 @@
-/* Import Tailwind CSS */
-@import "tailwindcss";
+/* Import Tailwind CSS directives */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-/* Global styles */
+/* Set up a universal font and fix horizontal scroll */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Optional: Helps prevent layout shift for all elements */
 * {
-  font-family: Outfit;
+  box-sizing: border-box;
 }
 
 /* Custom hover shadow class */
@@ -11,21 +21,25 @@
   box-shadow: 4px 4px 0 #000; /* Your custom shadow */
 }
 
-/* If you want a custom lightHover color in the global scope */
+/* Optional hover background color */
 .hover-bg-lightHover:hover {
   background-color: #fcf4ff; /* lightHover color */
 }
 
-/* globals.css or custom.css */
-
+/* Reusable grid layout */
 .grid-auto {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem; /* This defines the spacing between the grid items */
+  gap: 1.5rem; /* spacing between grid items */
 }
 
+/* Responsive adjustment for smaller screens */
 @media (max-width: 640px) {
   .grid-auto {
     grid-template-columns: 1fr; /* Single column on small screens */
   }
+}
+
+* {
+  outline: 1px solid red;
 }
