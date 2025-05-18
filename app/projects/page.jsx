@@ -1,14 +1,12 @@
-"use client";
-import { assets, workData } from "@/assets/assets";
-import Image from "next/image";
-import React, { useState } from "react";
+'use client';
+import React, { useState } from 'react';
 import { motion } from "motion/react";
-import Link from "next/link";
+import { workData } from '@/assets/assets';
 
-const ProjectsPage = () => {
+const categories = ["All", "Frontend", "Backend", "Fullstack", "UI/UX", "WordPress"];
+
+export default function ProjectsPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-
-  const categories = ["All", "Frontend", "Fullstack", "Backend", "WordPress", "UI/UX"];
 
   const filteredProjects =
     selectedCategory === "All"
@@ -22,61 +20,93 @@ const ProjectsPage = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <Link
+      {/* Top back link */}
+      <motion.a
         href="/"
-        className="mb-6 inline-block text-sm text-gray-600 hover:underline"
+        className="text-sm text-gray-500 hover:text-black transition flex items-center mb-10 w-max"
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
       >
         ← Back to Home
-      </Link>
+      </motion.a>
 
-      <h1 className="text-4xl font-Ovo text-center mb-10">All Projects</h1>
+      <motion.h2
+        className="text-5xl font-Ovo text-center mb-6"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.3 }}
+      >
+        All Projects
+      </motion.h2>
 
-      <div className="flex flex-wrap justify-center gap-3 mb-12">
+      <motion.p
+        className="max-w-3xl mx-auto text-center text-gray-700 mb-14"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+      >
+        Explore categorized projects across frontend, fullstack, WordPress, and UI/UX.
+      </motion.p>
+
+      {/* Filter Tabs */}
+      <motion.div
+        className="flex flex-wrap justify-center gap-4 mb-12"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
         {categories.map((category) => (
           <motion.button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 rounded-full border transition-all duration-300 ${
+            className={`px-5 py-2 rounded-full border font-medium ${
               selectedCategory === category
-                ? "bg-black text-white border-black"
-                : "border-gray-400 text-gray-600 hover:bg-gray-100"
-            }`}
+                ? "bg-black text-white"
+                : "bg-white text-black border-gray-300"
+            } transition`}
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 0.98 }}
           >
             {category}
           </motion.button>
         ))}
-      </div>
+      </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Project Grid */}
+      <motion.div
+        layout
+        className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
         {filteredProjects.map((project, index) => (
           <motion.div
             key={index}
-            className="relative aspect-square rounded-xl overflow-hidden shadow group"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.05 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 + index * 0.1 }}
+            className="border border-gray-300 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition bg-white"
           >
             <div
-              className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition"
+              className="h-48 bg-cover bg-center"
               style={{ backgroundImage: `url(${project.bgImage})` }}
-            />
-            <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white text-center px-4 opacity-0 group-hover:opacity-100 transition">
-              <h3 className="text-lg font-semibold">{project.title}</h3>
-              <p className="text-sm mt-2">{project.category}</p>
-              <div className="flex gap-3 mt-4">
+            ></div>
+            <div className="p-5">
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">{project.title}</h3>
+              <p className="text-sm text-gray-600 mb-4">{project.description}</p>
+              <div className="flex gap-4">
                 <a
                   href={project.websiteLink}
                   target="_blank"
-                  className="bg-white text-black px-4 py-1 rounded-full text-sm hover:bg-gray-200 transition"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-700 hover:underline"
                 >
                   Live
                 </a>
                 <a
                   href={project.githubLink}
                   target="_blank"
-                  className="bg-white text-black px-4 py-1 rounded-full text-sm hover:bg-gray-200 transition"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-700 hover:underline"
                 >
                   GitHub
                 </a>
@@ -84,9 +114,16 @@ const ProjectsPage = () => {
             </div>
           </motion.div>
         ))}
-      </div>
+      </motion.div>
+
+      {/* Bottom Back Button */}
+      <motion.a
+        href="/"
+        className="block w-max mx-auto mt-20 px-8 py-3 border border-black text-black rounded-full hover:bg-gray-100 transition"
+        whileHover={{ scale: 1.05 }}
+      >
+        ← Back to Home
+      </motion.a>
     </motion.div>
   );
-};
-
-export default ProjectsPage;
+}
