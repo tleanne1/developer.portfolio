@@ -42,6 +42,12 @@ import secure_code_icon from './secure_code_icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
 import uiux_icon from './uiux_icon.png';
+import react from './react.svg';
+import javascript from './javascript.png';
+import nextjs from './nextjs.png';
+import nodejs from './nodejs.png';
+import python from './python.png';
+import tailwind from './tailwind.png';
 
 export const assets = {
     api_icon,
@@ -87,7 +93,13 @@ export const assets = {
     secure_code_icon,
     right_arrow_bold,
     right_arrow_bold_dark,
-    uiux_icon
+    uiux_icon,
+    react,
+    javascript,
+    nextjs,
+    nodejs,
+    python,
+    tailwind,
 };
 
 export const workData = [
@@ -187,11 +199,11 @@ export const serviceData = [
   ];  
 
 export const infoList = [
-    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Technologies', description: 'JavaScript, React Js, Next Js, Node Js, Python' },
-    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.Tech in Information Technology' },
+    { icon: assets.code_icon, iconDark: assets.code_icon_dark, title: 'Technologies', description: 'JavaScript, React, Python, Next Js, Node Js, MongoDB' },
+    { icon: assets.edu_icon, iconDark: assets.edu_icon_dark, title: 'Education', description: 'B.S in Information Technology' },
     { icon: assets.project_icon, iconDark: assets.project_icon_dark, title: 'Projects', description: 'Built more than 5 projects' }
 ];
 
 export const toolsData = [
-    assets.vscode, assets.sentry, assets.mongodb, assets.figma, assets.git
+    assets.javascript, assets.react, assets.python, assets.nextjs, assets.nodejs, assets.mongodb, assets.sentry, assets.github_icon, assets.git
 ];

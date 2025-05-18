@@ -14,12 +14,11 @@ html, body {
 
 /* Custom hover shadow class */
 .hover-shadow-black:hover {
-  box-shadow: 4px 4px 0 #000; /* Your custom shadow */
+  box-shadow: 4px 4px 0 #000;
 }
 
-/* If you want a custom lightHover color in the global scope */
 .hover-bg-lightHover:hover {
-  background-color: #fcf4ff; /* lightHover color */
+  background-color: #fcf4ff;
 }
 
 /* Custom grid utility */
@@ -33,4 +32,18 @@ html, body {
   .grid-auto {
     grid-template-columns: 1fr;
   }
+}
+
+/* ✅ Seamless infinite scroll animation */
+@keyframes scrollLoop {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scrollLoop {
+  animation: scrollLoop 15s linear infinite;
 }
