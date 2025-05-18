@@ -1,6 +1,8 @@
+import api_icon from './api_icon.png';
 import user_image from './user-image.png';
 import code_icon from './code-icon.png';
 import code_icon_dark from './code-icon-dark.png';
+import consulting_icon from './consulting_icon.png';
 import edu_icon from './edu-icon.png';
 import edu_icon_dark from './edu-icon-dark.png';
 import project_icon from './project-icon.png';
@@ -8,6 +10,7 @@ import project_icon_dark from './project-icon-dark.png';
 import vscode from './vscode.png';
 import sentry from './sentry.png';
 import figma from './figma.png';
+import frontend_icon from './frontend_icon.png';
 import git from './git.png';
 import github_icon from './github_icon.png'
 import mongodb from './mongodb.png';
@@ -33,14 +36,19 @@ import mobile_icon from './mobile-icon.png';
 import ui_icon from './ui-icon.png';
 import graphics_icon from './graphics-icon.png';
 import right_arrow from './right-arrow.png';
+import performance_icon from './performance_icon.png';
 import send_icon from './send-icon.png';
+import secure_code_icon from './secure_code_icon.png';
 import right_arrow_bold from './right-arrow-bold.png';
 import right_arrow_bold_dark from './right-arrow-bold-dark.png';
+import uiux_icon from './uiux_icon.png';
 
 export const assets = {
+    api_icon,
     user_image,
     code_icon,
     code_icon_dark,
+    consulting_icon,
     edu_icon,
     edu_icon_dark,
     project_icon,
@@ -48,6 +56,7 @@ export const assets = {
     vscode,
     sentry,
     figma,
+    frontend_icon,
     git,
     github_icon,
     mongodb,
@@ -73,9 +82,12 @@ export const assets = {
     ui_icon,
     graphics_icon,
     right_arrow,
+    performance_icon,
     send_icon,
+    secure_code_icon,
     right_arrow_bold,
-    right_arrow_bold_dark
+    right_arrow_bold_dark,
+    uiux_icon
 };
 
 export const workData = [

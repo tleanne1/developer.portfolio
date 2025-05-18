@@ -1,7 +1,7 @@
-import { assets, infoList, toolsData } from '@/assets/assets'
-import React from 'react'
-import Image from 'next/image'
-import { motion } from "motion/react"
+import { assets, infoList, toolsData } from "@/assets/assets";
+import React from "react";
+import Image from "next/image";
+import { motion } from "motion/react";
 
 const About = () => {
   return (
@@ -48,7 +48,13 @@ const About = () => {
           transition={{ duration: 0.6 }}
           className="w-64 sm:w-80 rounded-3xl max-w-none"
         >
-          <Image src={assets.user_image} alt="User portrait" className="w-full rounded-3xl" />
+          {assets.user_image && (
+            <Image
+              src={assets.user_image}
+              alt="User portrait"
+              className="w-full rounded-3xl"
+            />
+          )}
         </motion.div>
 
         {/* Text Content */}
@@ -59,13 +65,25 @@ const About = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="flex-1"
         >
-          <h3 className="text-xl font-semibold mb-4 text-gray-700 font-Ovo">Who I Am</h3>
+          <h3 className="text-xl font-semibold mb-4 text-gray-700 font-Ovo">
+            Who I Am
+          </h3>
           <p className="mb-10 max-w-2xl font-Ovo text-gray-800 leading-relaxed">
-            I'm a Frontend Developer skilled in modern technologies like HTML, CSS, JavaScript, React, Tailwind CSS, Next.js, and Node.js. I create interactive, performance-optimized UIs that deliver high-quality user experiences. I also work with Python, enabling seamless interaction between frontend and backend systems.
-            <br /><br />
-            In addition to frontend expertise, I have experience in cybersecurity, specializing in vulnerability management and threat detection. This combination allows me to prioritize secure coding practices while building accessible, engaging applications.
-            <br /><br />
-            I'm constantly learning and exploring new technologies, pushing the boundaries of what's possible — one line of code at a time.
+            I'm a Frontend Developer skilled in modern technologies like HTML,
+            CSS, JavaScript, React, Tailwind CSS, Next.js, and Node.js. I create
+            interactive, performance-optimized UIs that deliver high-quality user
+            experiences. I also work with Python, enabling seamless interaction
+            between frontend and backend systems.
+            <br />
+            <br />
+            In addition to frontend expertise, I have experience in cybersecurity,
+            specializing in vulnerability management and threat detection. This
+            combination allows me to prioritize secure coding practices while
+            building accessible, engaging applications.
+            <br />
+            <br />
+            I'm constantly learning and exploring new technologies, pushing the
+            boundaries of what's possible — one line of code at a time.
           </p>
 
           {/* Info Cards */}
@@ -74,7 +92,7 @@ const About = () => {
             viewport={{ once: true }}
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl"
           >
-            {infoList.map(({ icon, title, description, index }) => (
+            {infoList.map(({ icon, title, description }, index) => (
               <motion.li
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -83,7 +101,7 @@ const About = () => {
                 key={index}
                 className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-gray-100 hover:-translate-y-1 transition duration-500 hover:shadow-md"
               >
-                <Image src={icon} alt={title} />
+                {icon && <Image src={icon} alt={title} />}
                 <h3 className="my-4 font-semibold text-gray-700">{title}</h3>
                 <p className="text-gray-600 text-sm">{description}</p>
               </motion.li>
@@ -111,14 +129,17 @@ const About = () => {
                 key={index}
                 className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 hover:shadow-md transition-all duration-300"
               >
-                <Image src={tool} alt="Tool" className="w-5 sm:w-7" />
+                {tool && (
+                  <Image src={tool} alt="Tool" className="w-5 sm:w-7" />
+                )}
               </li>
             ))}
           </motion.ul>
         </motion.div>
       </motion.div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
+
