@@ -1,118 +1,91 @@
 "use client";
-import React, { useState } from "react";
+import { assets, workData } from "@/assets/assets";
 import Image from "next/image";
-import { workData } from "@/assets/assets";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from "react";
+import { motion } from "motion/react";
+import Link from "next/link";
 
 const ProjectsPage = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "Frontend", "Fullstack", "Backend", "UI/UX", "WordPress"];
+  const categories = ["All", "Frontend", "Fullstack", "Backend", "WordPress", "UI/UX"];
+
   const filteredProjects =
-    activeCategory === "All"
+    selectedCategory === "All"
       ? workData
-      : workData.filter((project) => project.category === activeCategory);
+      : workData.filter((project) => project.category === selectedCategory);
 
   return (
-    <main
-      className="min-h-screen px-6 py-20 max-w-6xl mx-auto bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto]"
+    <motion.div
+      className="w-full min-h-screen px-[12%] py-20 bg-[url('/footer-bg-color.png')] bg-no-repeat bg-center bg-[length:90%_auto]"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
     >
-      {/* Back to Home Link */}
-      <div className="mb-6">
-        <a
-          href="/"
-          className="inline-block text-sm text-black-600 hover:underline transition"
-        >
-          ← Back to Home
-        </a>
-      </div>
+      <Link
+        href="/"
+        className="mb-6 inline-block text-sm text-gray-600 hover:underline"
+      >
+        ← Back to Home
+      </Link>
 
-      {/* Page Title */}
-      <h1 className="text-4xl font-display text-center mb-8">My Projects</h1>
+      <h1 className="text-4xl font-Ovo text-center mb-10">All Projects</h1>
 
-      {/* Animated Category Filters */}
-      <div className="flex flex-wrap justify-center gap-3 mb-12 relative">
-        {categories.map((cat) => (
+      <div className="flex flex-wrap justify-center gap-3 mb-12">
+        {categories.map((category) => (
           <motion.button
-            key={cat}
-            onClick={() => setActiveCategory(cat)}
-            className={`relative px-4 py-2 rounded-full font-medium z-10 transition ${
-              activeCategory === cat
-                ? "text-white"
-                : "text-gray-700 hover:text-black"
+            key={category}
+            onClick={() => setSelectedCategory(category)}
+            className={`px-4 py-2 rounded-full border transition-all duration-300 ${
+              selectedCategory === category
+                ? "bg-black text-white border-black"
+                : "border-gray-400 text-gray-600 hover:bg-gray-100"
             }`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            {activeCategory === cat && (
-              <motion.div
-                layoutId="bubble"
-                className="absolute inset-0 bg-black rounded-full z-[-1]"
-                transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              />
-            )}
-            {cat}
+            {category}
           </motion.button>
         ))}
       </div>
 
-      {/* Project Cards */}
-      <AnimatePresence mode="wait">
-        {filteredProjects.length > 0 ? (
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredProjects.map((project, index) => (
           <motion.div
-            key={activeCategory}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            key={index}
+            className="relative aspect-square rounded-xl overflow-hidden shadow group"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.05 }}
           >
-            {filteredProjects.map((project, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-xl overflow-hidden shadow group"
-              >
-                <div
-                  className="aspect-square bg-cover bg-center group-hover:scale-105 transition-all"
-                  style={{ backgroundImage: `url(${project.bgImage})` }}
-                />
-                <div className="p-5">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-gray-600">{project.description}</p>
-                  <div className="mt-3 flex gap-4">
-                    <a
-                      href={project.websiteLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 hover:underline text-sm"
-                    >
-                      Live
-                    </a>
-                    <a
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 hover:underline text-sm"
-                    >
-                      Code
-                    </a>
-                  </div>
-                </div>
+            <div
+              className="absolute inset-0 bg-cover bg-center group-hover:scale-105 transition"
+              style={{ backgroundImage: `url(${project.bgImage})` }}
+            />
+            <div className="absolute inset-0 bg-black/40 flex flex-col justify-center items-center text-white text-center px-4 opacity-0 group-hover:opacity-100 transition">
+              <h3 className="text-lg font-semibold">{project.title}</h3>
+              <p className="text-sm mt-2">{project.category}</p>
+              <div className="flex gap-3 mt-4">
+                <a
+                  href={project.websiteLink}
+                  target="_blank"
+                  className="bg-white text-black px-4 py-1 rounded-full text-sm hover:bg-gray-200 transition"
+                >
+                  Live
+                </a>
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  className="bg-white text-black px-4 py-1 rounded-full text-sm hover:bg-gray-200 transition"
+                >
+                  GitHub
+                </a>
               </div>
-            ))}
+            </div>
           </motion.div>
-        ) : (
-          <motion.p
-            key="empty"
-            className="text-center text-gray-500 italic mt-20"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-          >
-            No projects in this category... yet!
-          </motion.p>
-        )}
-      </AnimatePresence>
-    </main>
+        ))}
+      </div>
+    </motion.div>
   );
 };
 

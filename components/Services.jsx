@@ -1,7 +1,8 @@
-import { assets, serviceData } from '@/assets/assets'
-import Image from 'next/image'
-import React from 'react'
-import { motion } from "motion/react"
+import { assets, serviceData } from '@/assets/assets';
+import Image from 'next/image';
+import React from 'react';
+import { motion } from "motion/react";
+import Link from 'next/link';
 
 const Services = () => {
   return (
@@ -50,7 +51,7 @@ const Services = () => {
         viewport={{ once: true }}
         transition={{ delay: 0.7, duration: 0.5 }}
       >
-        {serviceData.map(({ icon, title, description, link }, index) => (
+        {serviceData.map(({ icon, title, description }, index) => (
           <motion.div
             key={index}
             whileInView={{ scale: 1.05 }}
@@ -59,22 +60,20 @@ const Services = () => {
           >
             <Image src={icon} alt={`${title} icon`} className="w-10" />
             <h3 className="text-lg my-4 text-gray-800 font-semibold">{title}</h3>
-            <p className="text-sm text-gray-600 leading-relaxed">
-              {description}
-            </p>
-            <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-sm mt-5 text-blue-600 hover:underline"
+            <p className="text-sm text-gray-600 leading-relaxed">{description}</p>
+
+            <Link
+              href="/services"
+              className="flex items-center gap-2 text-sm mt-5 text-gray-600 hover:underline"
             >
               Read more <Image src={assets.right_arrow} alt="Arrow icon" className="w-4" />
-            </a>
+            </Link>
           </motion.div>
         ))}
       </motion.div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;
+
