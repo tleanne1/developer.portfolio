@@ -1,9 +1,8 @@
-/* Import Tailwind CSS directives */
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Set up a universal font and fix horizontal scroll */
+/* Global styles */
 html, body {
   margin: 0;
   padding: 0;
@@ -11,35 +10,26 @@ html, body {
   font-family: 'Outfit', sans-serif;
 }
 
-/* Optional: Helps prevent layout shift for all elements */
 * {
   box-sizing: border-box;
 }
 
-/* Custom hover shadow class */
 .hover-shadow-black:hover {
-  box-shadow: 4px 4px 0 #000; /* Your custom shadow */
+  box-shadow: 4px 4px 0 #000;
 }
 
-/* Optional hover background color */
 .hover-bg-lightHover:hover {
-  background-color: #fcf4ff; /* lightHover color */
+  background-color: #fcf4ff;
 }
 
-/* Reusable grid layout */
 .grid-auto {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem; /* spacing between grid items */
+  gap: 1.5rem;
 }
 
-/* Responsive adjustment for smaller screens */
 @media (max-width: 640px) {
   .grid-auto {
-    grid-template-columns: 1fr; /* Single column on small screens */
+    grid-template-columns: 1fr;
   }
-}
-
-* {
-  outline: 1px solid red;
 }
