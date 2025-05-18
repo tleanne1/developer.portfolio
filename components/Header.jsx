@@ -59,17 +59,14 @@ const Header = () => {
           Frontend Developer with a passion for modern UI, React + Tailwind CSS, and secure coding practices — blending clean design with functional code.
         </motion.p>
 
-        {/* Commented out Featured Project for now */}
-        {/*
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
           className="mt-6 text-sm text-gray-500"
         >
-          ⚡ Recently built: <a href="https://your-bug-tracker-demo.netlify.app" target="_blank" className="underline hover:text-black transition">Bug Tracker Dashboard</a> — modern, responsive, and secure.
+          ⚡ Recently built: <a href="https://harmony-yoga-client.vercel.app/" target="_blank" className="underline hover:text-black transition">Harmony Yoga Site</a> — modern, responsive, and secure.
         </motion.div>
-        */}
 
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
           <motion.a

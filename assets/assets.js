@@ -96,18 +96,21 @@ export const workData = [
         description: "Responsive frontend project simulating a real client build for a modern yoga studio. Built with React, Vite, Tailwind CSS, and Framer Motion. Features animated transitions, reusable components, and a calming, mobile-friendly design.",
         bgImage: "/harmony-yoga.png",
         websiteLink: "https://harmony-yoga-client.vercel.app",
-        githubLink: "https://github.com/tleanne1/harmony-yoga-client"
+        githubLink: "https://github.com/tleanne1/harmony-yoga-client",
+        category: "Frontend"
     },
     {
       title: "Bliss Café – Coffee Shop Website",
       description: "A sleek, mobile-friendly landing page for a fictional café. Designed with modern UI patterns using HTML, CSS, and JavaScript. Includes hero, product highlights, and location/contact sections.",
+      category: "Frontend",
       bgImage: "/bliss-cafe.png",
       websiteLink: "https://bliss-cafe-two.vercel.app",
-      githubLink: "https://https://github.com/tleanne1/bliss-cafe"
+      githubLink: "https://https://github.com/tleanne1/bliss-cafe",
     },
     {
       title: "BrightNest – Interior Design Portfolio",
       description: "A warm, elegant portfolio site for a fictional interior designer. Built with React, Tailwind CSS, and Vite, featuring a custom color palette, image gallery, services, and testimonials.",
+      category: "Frontend",
       bgImage: "/brightnest-client.png",
       websiteLink: "https://brightnest-client.vercel.app/",
       githubLink: "https://github.com/tleanne1/brightnest-client"
@@ -115,6 +118,7 @@ export const workData = [
     {
       title: "FitHub – Fitness Coach Promo Site",
       description: "A bold, modern promo site for a fictional fitness coach. Built with React, Tailwind CSS, and Vite. Includes a custom color palette, featured programs, testimonials, and responsive layout.",
+      category: "Frontend",
       bgImage: "/fithub-client.png",
       websiteLink: "https://fithub-client.vercel.app",
       githubLink: "https://github.com/tleanne1/fithub-client"
@@ -122,6 +126,7 @@ export const workData = [
     {
       title: "BloomBakery – Artisan Cupcake Website",
       description: "A pastel-themed, responsive website for a fictional boutique cupcake business. Built with React, Tailwind CSS, and Vite. Features a full menu, testimonials, a custom EmailJS-powered order form, and elegant, soft branding throughout.",
+      category: "Frontend",
       bgImage: "/bloombakery-client.png",
       websiteLink: "https://bloombakery-client.vercel.app",
       githubLink: "https://github.com/tleanne1/bloombakery-client"
@@ -129,6 +134,7 @@ export const workData = [
     {
       title: "StoryTime Kids – Children’s Author Site",
       description: "A playful, responsive website built for a fictional children’s author. Developed with React, Tailwind CSS, and Vite. Features animated sections, soft color themes, book previews, testimonials, and a friendly contact form — perfect for showcasing stories and connecting with young readers.",
+      category: "Frontend",
       bgImage: "/storytime-client.png",
       websiteLink: "https://storytime-client.vercel.app",
       githubLink: "https://github.com/tleanne1/storytime-client"
